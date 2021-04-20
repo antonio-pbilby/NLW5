@@ -1,5 +1,11 @@
 import express from "express";
 
+import "./database";
+import { routes } from "./routes";
+//colocar só o diretório já indica
+//que queremos selecionar o index.js
+//daquele diretório
+
 const app = express();
 
 /**
@@ -9,15 +15,8 @@ const app = express();
  *  DELETE = Deletar
  *  PATCH = Alterar uma informação específica
  */
+app.use(express.json());
 
-app.get("/", (request, response) => {
-  return response.json({
-    message: "Olá NLW 05",
-  });
-});
-
-app.post("/", (request, response) => {
-  return response.json({ message: "usuário salvo com sucesso" });
-});
+app.use(routes);
 
 app.listen(3333, () => console.log("server is running on port 3333"));
