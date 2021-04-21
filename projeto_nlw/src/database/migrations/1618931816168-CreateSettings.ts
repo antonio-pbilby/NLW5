@@ -11,6 +11,7 @@ export class CreateSettings1618931816168 implements MigrationInterface {
           {
             name: "id",
             type: "uuid",
+            isPrimary: true,
           },
           {
             name: "username",
