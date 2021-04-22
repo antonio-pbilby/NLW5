@@ -1,6 +1,6 @@
 import { getCustomRepository, Repository } from "typeorm";
 import { MessagesRepository } from "../repositories/MessagesRepository";
-import { Message } from "../entities/Messages";
+import { Message } from "../entities/Message";
 
 interface IMessageCreate {
   //a interrogação indica que o admin_id é opcional
